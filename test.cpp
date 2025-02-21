@@ -16,6 +16,7 @@ void print(const std::string& text) {
     std::cout << date + " : " + text << std::endl;
 }
 void Check_For_Updates(){
+    std::this_thread::sleep_for(std::chrono::seconds(15));
     int Aquium_Updator_ex = system("/home/gamerpc/Aquium_Updator_Project/AquiumUpdater -Wl");
     if (Aquium_Updator_ex == 0){
         std::cout << "LOG: Checked for updates!" << std::endl;
